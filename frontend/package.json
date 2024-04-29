@@ -25,10 +25,12 @@
   },
   "scripts": {
     "start": "craco start",
+    "start-fix": "set NODE_OPTIONS=--openssl-legacy-provider && craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject"
-  },
+},
+
   "eslintConfig": {
     "extends": [
       "react-app"

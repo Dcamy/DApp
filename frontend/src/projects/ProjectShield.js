@@ -14,7 +14,7 @@ const connectWallet = async () => {
 };
 
 
-function ProjectIPFS() {
+function ProjectShield() {
     // TODO: Add props and logic as needed
 
     return (
@@ -25,10 +25,10 @@ function ProjectIPFS() {
                 <header>
                     <Link to="/blog-post" className="block mb-6">
                         <h3 className="h4 mb-2">
-                            <Link to="/blog-post" className="hover:text-gray-100 transition duration-150 ease-in-out">Project IPFS</Link>
+                            <Link to="/blog-post" className="hover:text-gray-100 transition duration-150 ease-in-out">Project Spartan</Link>
                         </h3>
                         <figure className="relative h-0 pb-9/16 overflow-hidden rounded-sm">
-                            <img className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src={require('../images/news-01.jpg').default} width="352" height="198" alt="News 01" />
+                            <img className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src={require('../images/danny0639_Using_this_image_for_branding_and_style_please_make_i_fd5b2b11-2560-4258-a06f-c5af32be0abb.png').default} width="352" height="198" alt="News 01" />
                         </figure>
                     </Link>
                     <div className="mb-3">
@@ -71,7 +71,7 @@ function ProjectIPFS() {
 
 
                 </header>
-                <p className="text-lg text-gray-400 flex-grow">Fund our two-tier affiliate program: a tool for community growth, not pyramids. Build your clan, embed with ease, and value transparency and privacy.</p>
+                <p className="text-lg text-gray-400 flex-grow">Project Spartan: your AI savage in the digital shadows. iChain's OS cloaks you in anonymity, with an AI Spartan ensuring your online fortress remains unbreached. Cyberpunk security, redefined. This is next generation Anti Virus.</p>
                 <footer className="flex items-center mt-4">
                     <Link to="#">
                         <img className="rounded-full flex-shrink-0 mr-4" src={require('../images/Screenshot 2024-03-28 081454.png').default} width="60" height="60" alt="Author 01" />
@@ -130,4 +130,4 @@ function ProjectIPFS() {
     );
 }
 
-export default ProjectIPFS;
+export default ProjectShield

@@ -24,7 +24,7 @@ const sendTransaction = async (e) => {
   try {
     const amount = parseFloat(inputValue);  // Convert the input value to a float
     if (isNaN(amount) || amount <= 0) {
-      alert('Please enter a valid amount greater than 0');
+      alert('Please enter a valid amount greater than 0, click embed for tip');
       return;
     }
 
@@ -35,7 +35,7 @@ const sendTransaction = async (e) => {
       await window.ethereum.request({ method: 'eth_requestAccounts' });  // Request account access if needed
 
       const transactionParameters = {
-        to: '0xa3c5Fc815b35aDbF25D2FE1aAa086B09C3521A20',  // Must match the intended recipient's address
+        to: 'CtRJPQJeNrb3ZRRBaASkkT8Mh2biTYnCXipC4HBUEgRe',  // Must match the intended recipient's address
         from: window.ethereum.selectedAddress,  // Use the selected address
         value: amountInWei,  // Amount in wei, as a hex string
         // Removed gasPrice and gas limit to let MetaMask handle it automatically
@@ -80,7 +80,7 @@ const sendTransaction = async (e) => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           <div className="max-w-3xl pb-12 md:pb-20 text-center md:text-left">
-            <h1 className="h1" data-aos="fade-up">Featured Project</h1>
+            <h1 className="h1" data-aos="fade-up">Current Project</h1>
           </div>
 
           <div className="pb-12 md:pb-20">
@@ -101,7 +101,7 @@ const sendTransaction = async (e) => {
                           type="number"
                           value={inputValue}
                           onChange={handleInputChange}
-                          placeholder="Amount, find the truth"
+                          placeholder="Amount, Embed the truth"
                           className="flex-grow text-gray-100 py-1 px-3 rounded-full bg-gray-800 hover:bg-gray-700 transition duration-150 ease-in-out m-1"
                         />
                       </div>
@@ -119,13 +119,13 @@ const sendTransaction = async (e) => {
                     <Link to="/blog-post" className="hover:text-gray-100 transition duration-150 ease-in-out">Project Embed</Link>
                   </h3>
                 </header>
-                <p className="text-lg text-gray-400 flex-grow">Fuel our cutting-edge two-tier affiliate program: a catalyst for community expansion, not traditional pyramids. Forge your tribe, seamlessly integrate, and champion transparency and privacy.</p>
+                <p className="text-lg text-gray-400 flex-grow">Change of plans, launching on Solana, send contributioins to The DAO's multisig wallet 'CtRJPQJeNrb3ZRRBaASkkT8Mh2biTYnCXipC4HBUEgRe'. Fuel our cutting-edge two-tier affiliate program: a catalyst for community expansion, not traditional pyramids. Forge your tribe, seamlessly integrate, and champion transparency and privacy.</p>
                 <footer className="flex items-center mt-4">
                   <Link to="#">
                     <img className="rounded-full flex-shrink-0 mr-4" src={require('../images/Screenshot 2024-03-28 081454.png').default} width="40" height="40" alt="Author 04" />
                   </Link>
                   <div>
-                    <Link to="#" className="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out">SynergiCoin</Link>
+                    <Link to="#" className="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out">Change of plans, launching on Solana, send contributioins to The DAO's multisig wallet 'CtRJPQJeNrb3ZRRBaASkkT8Mh2biTYnCXipC4HBUEgRe' SynergiCoin #LifeLock #RIO #WhiteLable</Link>
                     <span className="text-gray-700"> - </span>
                     <span className="text-gray-500">Goal $7500</span>
                   </div>
@@ -135,7 +135,7 @@ const sendTransaction = async (e) => {
           </div>
 
           <div className="max-w-sm mx-auto md:max-w-none">
-            <h4 className="h4 pb-6 mb-10 border-b border-gray-700" data-aos="fade-up">Latest articles</h4>
+            <h4 className="h4 pb-6 mb-10 border-b border-gray-700" data-aos="fade-up">Upcoming Projects - Next Up Project SynergyCoin (SGC)</h4>
             <section className="relative">
               <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
                 {projectComponents.map((Component, index) => (

@@ -2,18 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from '../utils/Dropdown';
 
-const connectWallet = async () => {
-  try {
-    // Requests that the user provides an Ethereum account to the dapp.
-    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-    // Set the account to state or handle it as needed
-    console.log(accounts[0]); // This will log the user's account to the console
-  } catch (error) {
-    // Handle errors if the user denies access or if there are no providers.
-    console.error(error);
-  }
-};
-
 function Header() {
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -62,19 +50,16 @@ function Header() {
 
             {/* Desktop menu links */}
             <ul className="flex flex-grow justify-end flex-wrap items-center">
-              {/*<li>
+              <li>
                 <Link to="/features" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">
                   Features
                 </Link>
-              </li>*/}
-              <li>
-                <Link to="/pricing" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">CtRJPQJeNrb3ZRRBaASkkT8Mh2biTYnCXipC4HBUEgRe</Link>
               </li>
               <li>
                 <Link to="/pricing" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">Pricing</Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">Market</Link>
+                <Link to="/blog" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">Blog</Link>
               </li>
               <li>
                 <Link to="/about" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">About us</Link>
@@ -85,21 +70,23 @@ function Header() {
                 <li>
                   <Link to="/contact" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">Contact us</Link>
                 </li>
-                {/*<li>
+                <li>
                   <Link to="/help" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">Help center</Link>
                 </li>
                 <li>
                   <Link to="/404" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">404</Link>
-                </li>*/}
+                </li>
               </Dropdown>
             </ul>
 
             {/* Desktop sign in links */}
             <ul className="flex flex-grow justify-end flex-wrap items-center">
-              <button
-                onClick={connectWallet}
-                className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">Connect Wallet
-              </button>
+              <li>
+                <Link to="/signin" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">Sign in</Link>
+              </li>
+              <li>
+                <Link to="/signup" className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">Sign up</Link>
+              </li>
             </ul>
 
           </nav>
@@ -120,14 +107,14 @@ function Header() {
             {/*Mobile navigation */}
             <nav id="mobile-nav" ref={mobileNav} className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" style={mobileNavOpen ? { maxHeight: mobileNav.current.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: .8 } }>
               <ul className="bg-gray-800 px-4 py-2">
-                {/*<li>
+                <li>
                   <Link to="/features" className="flex text-gray-300 hover:text-gray-200 py-2">Features</Link>
-                </li>*/}
+                </li>
                 <li>
                   <Link to="/pricing" className="flex text-gray-300 hover:text-gray-200 py-2">Pricing</Link>
                 </li>
                 <li>
-                  <Link to="/blog" className="flex text-gray-300 hover:text-gray-200 py-2">Market</Link>
+                  <Link to="/blog" className="flex text-gray-300 hover:text-gray-200 py-2">Blog</Link>
                 </li>
                 <li>
                   <Link to="/about" className="flex text-gray-300 hover:text-gray-200 py-2">About us</Link>
@@ -138,12 +125,12 @@ function Header() {
                     <li>
                       <Link to="/contact" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">Contact us</Link>
                     </li>
-                    {/*<li>
+                    <li>
                       <Link to="/help" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">Help center</Link>
                     </li>
                     <li>
                       <Link to="/404" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">404</Link>
-                    </li>*/}
+                    </li>
                   </ul>
                 </li>
                 <li>

@@ -9,7 +9,7 @@ function Clients() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 mb-4">Our customers span the globe</h1>
-            <p className="text-xl text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p className="text-xl text-gray-400">So this was in the template and it looks good, I might swap out a few, add X and tiktok but I see these all and protential partners so I am leaving it for now. Don't like it, feel free to start the admin procees and we can find a resolution.</p>
           </div>
 
           {/* Items */}
