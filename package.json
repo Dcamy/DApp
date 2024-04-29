@@ -23,14 +23,16 @@
     "web-vitals": "^1.1.2",
     "web3": "^4.7.0"
   },
+  
   "scripts": {
     "start": "craco start",
     "start-fix": "set NODE_OPTIONS=--openssl-legacy-provider && craco start",
-    "build": "craco build",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && craco build",
     "test": "craco test",
-    "eject": "craco eject"
-},
-
+    "eject": "craco eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app"
@@ -52,5 +54,8 @@
   "main": "index.js",
   "repository": "https://github.com/Dcamy/SGC.git",
   "author": "Dcamy",
-  "license": "Private"
+  "license": "Private",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }
